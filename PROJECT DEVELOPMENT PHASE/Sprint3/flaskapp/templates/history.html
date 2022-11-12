@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>Input Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styletable.css') }}">
+  </head>
+  <body>
+{%extends "layout.html" %}
+{%block content%}
+  
+
+<div id="cont">
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th> Age </th><th> Total Billirubin </th><th> Direct Billirubin </th><th> Alkaline Phosphate </th><th> Alamine Aminotransferase </th><th> Asparatate Aminotransferase </th><th> Total proteins </th><th> Albumin </th><th> Al and Gb Ratio </th><th> Prediction </th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for row in rows %}
+
+            <tr>
+                <td> {{ row['AGE'] }} </td>
+                <td> {{ row['TB'] }} </td>
+                <td> {{ row['DB'] }} </td>
+                <td> {{ row['AP'] }} </td>
+                <td> {{ row['AA1'] }} </td>
+                <td> {{ row['AA2'] }} </td>
+                <td> {{ row['TP'] }} </td>
+                <td> {{ row['A'] }} </td>
+                <td> {{ row['AGR'] }} </td>
+                <td> {{ row['predict'] }} </td>
+            </tr>
+            
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+</body>
+{% endblock %}
+
+</html>
