@@ -1,0 +1,80 @@
+<html>
+  <head>
+    <title>Input Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styleform.css') }}">
+  </head>
+  <body>
+{%extends "layout.html" %}
+{%block content%}
+  
+
+<div id="cont">
+  <h1>Welcome {{msg}}</h1>
+<div id="inputform">
+  <h1 id="#hd" >Input Data</h1>
+    <form method="POST" action ="/predict" style="color:black">
+      <div>
+        <label for="age">Age</label>
+        <br>
+        <input name="age"required>
+      </div>
+      <div>
+        <label for="gender">Gender</label>
+        <br>
+        
+        <input type="radio" name="gender" value="0">
+        <label for="html">Male</label>
+        <input type="radio" name="gender" value="1">
+        <label for="css">Female</label>
+      </div>
+      <div>
+        <label for="tb">Total Billirubin</label>
+        <br>
+        <input name="tb"required>
+      </div>
+        <div>
+        <label for="db">Direct Billirubin</label>
+        <br>
+        <input name="db"required>
+      </div>
+        <div>
+        <label for="ap">Alkaline Phosphate</label>
+        <br>
+        <input name="ap"required>
+      </div>
+        <div>
+        <label for="aa1">Alamine Aminotransferase</label>
+        <br>
+        <input name="aa1"required>
+      </div>
+        <div>
+        <label for="aa2">Asparatate Aminotransferase</label>
+        <br>
+        <input name="aa2"required>
+      </div>
+        <div>
+        <label for="tp">Total Proteins</label>
+        <br>
+        <input name="tp"required>
+      </div>
+        <div>
+        <label for="a">Albumin</label>
+        <br>
+        <input name="a"required>
+      </div>
+        <div>
+        <label for="agr">Albumin and Globulin Ratio</label>
+        <br>
+        <input name="agr"required>
+      </div>
+        <div id="butn">
+        <input type="submit" >
+      </div>
+    </form>
+    
+  </div>
+</div>
+</body>
+{% endblock %}
+
+</html>
